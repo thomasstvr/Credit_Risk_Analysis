@@ -36,4 +36,4 @@ The precision is once again .01 and 1.00 for high-risk and low-risk respectively
 
 With a precision of .90 and 1.00, a recall of 1.00 and 1.00, and an f1 score of .95 and 1.00 for high-risk and low-risk, respectively, this is our best model yet.
 
-* 
+* The last model used is the EasyEnsembleClassifier which uses random under-sampling to reach a balance between the classes then uses AdaBoost learners trained on different boostrap samples, that is according to the [documentation]( https://imbalanced-learn.org/stable/references/generated/imblearn.ensemble.EasyEnsembleClassifier.html). 

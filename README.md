@@ -36,4 +36,12 @@ The precision is once again .01 and 1.00 for high-risk and low-risk respectively
 
 With a precision of .90 and 1.00, a recall of 1.00 and 1.00, and an f1 score of .95 and 1.00 for high-risk and low-risk, respectively, this is our best model yet.
 
-* The last model used is the EasyEnsembleClassifier which uses random under-sampling to reach a balance between the classes then uses AdaBoost learners trained on different boostrap samples, that is according to the [documentation]( https://imbalanced-learn.org/stable/references/generated/imblearn.ensemble.EasyEnsembleClassifier.html). 
+* The last model used is the EasyEnsembleClassifier which uses random under-sampling to reach a balance between the classes then uses AdaBoost learners trained on different boostrap samples, that is, according to the [documentation]( https://imbalanced-learn.org/stable/references/generated/imblearn.ensemble.EasyEnsembleClassifier.html). We employed this model with 100 samples. This model was our best yet with an accuracy of 1.0 and a perfect performance everywhere else, see below:
+
+![]( https://github.com/thomasstvr/Credit_Risk_Analysis/blob/main/Resources/EasyEnsembleClassifier.png)
+
+
+## Summary 
+In conclusion, the two ensemble models (BalancedRandomForestClassifer and EasyEnsembleClassifier) performed better than any of the other models. Although this looks good on paper, it does have me concerned about overfitting. Overfitting occurs when a model is to well fit to its specific set of training and testing data that it does not perform well in the real world. 
+
+Of the six models, I would choose to employ the BalancedRandomForestClassifer model due to the lower possibility of it being over fit and it’s high performance. With such a low precision and recall for high-risk loans, RandomOverSampler, SMOTE, ClusterCentroids, SMOTEENN,
